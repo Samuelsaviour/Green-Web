@@ -7,6 +7,8 @@ menuBar.addEventListener("click",function() {
     sidebar.classList.toggle("slide-in")
 })
 
+
+// when page scroll let navbar change color
  window.addEventListener("scroll" ,scrollfunction);
 
     function scrollfunction(){
