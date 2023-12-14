@@ -28,34 +28,50 @@ body{
     font-family: system-ui, -apple-system,'Poppins', sans-serif;
 }
 .header{
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 84px;
+    z-index: 2;
+    /* transition:  0.5s ease; */
+    background-color: var(--bg-color);
+}
+.header.addColor{
     background-color: var(--primary-color-);
 }
+ 
 .header .logo{
     display: flex;
     align-items: center;
     margin-left: 40px;
+    gap: 10px;
 }
 .header .logo .grw{
     font-size: 20px;
     color: var(--light--);
 }
 .header .logo .svg1{
-    fill: ;
+    fill:var(--primary-color-) ;
+    margin-top: 5px;
 
 }
 .header .nav_list{
     position: fixed;
-    display:none;
+    display:flex;
     flex-direction: column;
     top: 84px;
-    background-color: var(--primary-color-);
+    transform: translateY(-700px);
+    background-color: inherit;
     height: calc(100vh - 84px);
     width: 100%;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+.header .nav_list.slide-in{
+    transform: translateY(0);
 }
 .header .nav_list .ul_list{
     width:max-content;
@@ -88,6 +104,7 @@ body{
 }
 .header .menu{
     margin-right: 42px;
+    cursor: pointer;
 }
 .active_link{
     position: relative;
@@ -102,7 +119,9 @@ height: 3px;
 bottom: -5px;
 background-color:#DCF901;
 }
-
+main{
+    margin-top: 150px;
+}
 main .intro-text{
   max-width: 270px;
   margin: 0 auto;
@@ -247,7 +266,7 @@ main .images-den .image-preview-con .img-preview .prev-con .amount{
         justify-content:space-between;
     }
     .header .nav_list{
-        
+        transform: translateY(0);
         position: static;
         display: flex;
         top: 6px;
