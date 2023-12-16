@@ -172,31 +172,31 @@ main .buy_now .buy-icon{
     fill: #00853C;
 }
 main .slider-con{
-    width: 90%;
+    width: 80%;
     position: relative;
     margin: 40px auto;
-    padding: 0 20px;
-    height: max-content;
-     
-
+    height: max-content; 
     overflow: hidden;
 }
 main .slider-con .img-wrapper{
     display: flex;
-    width: max-content;
-    gap: 15px;
-    margin:  0 auto;
+    width:800%;
     position: relative;
     transition:0.5s ease-in-out;
 
-} 
-main .slider-con .img-wrapper img{
+}
+main .slider-con  .img-wrapper .imgcon{
+  width: 100%;
+  height: 250px; 
+}
+main .slider-con .img-wrapper .imgcon img{
     width: 100%;
-    height: 279px;
-    border-radius:7px ;
+    height: 100%;
+    border-radius: 5px;
     object-fit: cover;
+}
 
-} 
+ 
 main .slider-con .btn-right,
 main .slider-con .btn-left{
     position: absolute;
@@ -206,6 +206,25 @@ main .slider-con .btn-left{
     height: 40px;
     z-index: 3;
     top: 50%;
+    cursor: pointer;
+}
+main .slider-con .indicator-con{
+    display: flex;
+    width: max-content;
+    margin: 20px auto 0px auto;
+    gap: 10px;
+}
+main .slider-con .indicator-con .indicators{
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    border: 2px solid #fff;
+}
+main .slider-con .indicator-con .indicators.active-indicator{
+  background-color: var(--primary-color-) ;
 }
 main .slider-con .btn-right{
     right: 0;
@@ -348,6 +367,7 @@ main .see a{
     display: flex;
     justify-content: space-between;
     width: 90%;
+    gap: 20px;
     flex-wrap: wrap;
     margin: 0 auto 73px auto;
 }
@@ -448,11 +468,15 @@ main .see a{
         margin-top: 40px;
       }
       main .slider-con .img-wrapper{
-        width: 90%;
+        /* width: 90%;
         
-        margin: 0 auto;
+        margin: 0 auto; */
       }
-      main .slider-con  .img-wrapper img{
+      main .slider-con  .img-wrapper .imgcon{
+        width: 100%;
+        height: 350px; 
+      }
+      main .slider-con  .img-wrapper .imgcon img{
          width: 100%;
          height: 300px;
       }
