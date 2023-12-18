@@ -246,12 +246,12 @@ height: 47px;
 display: flex;
 align-items: center;
 justify-content: ;
-padding-left: 10px;
+padding-left: 29px;
 }
 
 main .images-den  .inputsect .search{
     padding: 10px 0;
-    margin-left: 7px;
+    margin-left: 15px;
     width: 80%;
     background-color: #252830;
     color: #fff;
@@ -270,6 +270,7 @@ main .images-den .image-preview-con{
 }
 main .images-den .image-preview-con .img-preview{
     width: 100%;
+    display: inline;
     height: 300px;
     margin:20px auto;
     position: relative;
@@ -315,8 +316,9 @@ main .images-den .image-preview-con .img-preview .prev-con .amount{
     color:#BDBDBD;
     font-size:12px;
     width: 73px;
+    display: block;
     text-transform: capitalize;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
