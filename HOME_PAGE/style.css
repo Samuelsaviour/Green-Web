@@ -505,8 +505,12 @@ main .see a{
     main .slider-con .indicator-con{
         display: flex;
     }
+    .footer{
+        
+    }
 .footer .footer-con{
     flex-direction: row;
+    justify-content: space-between;
 }
     
     } 
