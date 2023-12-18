@@ -76,10 +76,10 @@ function setime(params) {
 
 
 
- indicators[index].addEventListener("mouseover",function(params) {  
+ indicators[count].addEventListener("mouseover",function(params) {  
   clearInterval(intervalid)
  })
- indicators[index].addEventListener("mouseout",function(params) {  
+ indicators[count].addEventListener("mouseout",function(params) {  
   setime()
  })
 // when click let the sidebar slide in
