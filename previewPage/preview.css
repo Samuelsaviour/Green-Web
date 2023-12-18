@@ -179,6 +179,7 @@ backdrop-filter: blur(50px);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
     
     place-items: center;
     place-content: center;
@@ -188,6 +189,7 @@ backdrop-filter: blur(50px);
    position: relative;
    width: 100%;
    height: 290px;
+   margin: 15px 10px;
    object-position: center;
 }
 .preview-con .related-search .raper  .each-div .prev-con{
@@ -303,5 +305,8 @@ backdrop-filter: blur(50px);
     justify-content: space-between;
     flex-direction: row;
  }
+.preview-con .related-search .raper{
+    /* gap: 10px; */
+}
 
    }
