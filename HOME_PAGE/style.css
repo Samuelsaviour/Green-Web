@@ -40,7 +40,10 @@ body{
     background-color: var(--bg-color);
 }
 .header.addColor{
-    background-color: var(--primary-color-);
+    background: radial-gradient(164.25% 129.18% at 47.19% -0.63%, rgba(0, 133, 60, 0.30) 0%, rgba(0, 133, 60, 0.30) 100%);
+    backdrop-filter: blur(21px);
+    background: #1D1F26;
+    /* filter:blur(100px) ; */
 }
  
 .header .logo{
@@ -56,6 +59,7 @@ body{
 .header .logo .svg1{
     fill:var(--primary-color-) ;
     margin-top: 5px;
+    width: 20px;
 
 }
 .header .nav_list{
@@ -204,12 +208,12 @@ main .slider-con .btn-left{
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    z-index: 3;
+    z-index: 1;
     top: 50%;
     cursor: pointer;
 }
 main .slider-con .indicator-con{
-    display: flex;
+    display: none;
     width: max-content;
     margin: 20px auto 0px auto;
     gap: 10px;
@@ -318,7 +322,7 @@ main .images-den .image-preview-con .img-preview .prev-con .amount{
     width: 73px;
     display: block;
     text-transform: capitalize;
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -360,28 +364,36 @@ main .see a{
 
 /* footer */
 .footer{
-    background-color: var(--bg-color);
+    background: #1D1F26;
     width: 100%;
+    padding-top: 40px;
 
     /* border-top:1px solid var(--light--); */
 }
 .footer .footer-con{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 90%;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     margin: 0 auto 73px auto;
 }
 .footer .footer-con .footer-line .bdt{
     font-weight: 500;
     font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 35px;
     color:var(--light--);
 }
 .footer .footer-con .footer-line .footer-li-con{
     display: flex;
     gap: 40px;
+    align-items: center;
     flex-direction: column;
 
 }
@@ -490,6 +502,12 @@ main .see a{
         left: 50px;
         top: 50%;
       }
+    main .slider-con .indicator-con{
+        display: flex;
+    }
+.footer .footer-con{
+    flex-direction: row;
+}
     
     } 
     
