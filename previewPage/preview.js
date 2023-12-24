@@ -1,6 +1,7 @@
 const slidecon=document.querySelector(".img-wraper"),
 eachslide=Array.from(document.querySelectorAll(".each-div")),
-caroselcon=document.querySelector(".carosel-con")
+caroselcon=document.querySelector(".carosel-con"),
+btnBack=document.querySelector("#btn-back")
         
 
 let isdragging=false,
@@ -12,7 +13,10 @@ let isdragging=false,
      amountmove=400
 
 
-    
+    btnBack.addEventListener("click",function(){
+    window.history.back()
+    })
+
 
 eachslide.forEach((slide,index)=>{
     slide.addEventListener("dragstart",function(ev){
