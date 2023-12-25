@@ -82,7 +82,7 @@ body{
     max-width: 400px;
     height: 100%;
     margin: 0 auto;
-    border: 2px solid #525766;
+    /* border: 2px solid #525766; */
     padding: 25px 25px ;
     max-width: 400px;
     border-radius: 16px;
@@ -295,5 +295,7 @@ background: var(--Primary, #00853C);
 }
 .login_con .login_wrap{
     width: 90%;
+    border: 2px solid #525766;
+
 }
 }
