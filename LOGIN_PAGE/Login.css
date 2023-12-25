@@ -13,11 +13,9 @@
 body{
     height: 100vh;
     /* display: flex; */
-    display: grid;
-    place-content:;
-    place-items: ;
     
-    overflow-y: hidden;
+    
+    overflow: hidden;
     background: var(--Background, #181A20);
     font-family:system-ui, -apple-system, sans-serif 'Cedarville Cursive', cursive;
     font-family:system-ui, -apple-system, 'Fira Code', monospace;
