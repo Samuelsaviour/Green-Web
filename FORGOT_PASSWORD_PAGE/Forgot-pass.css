@@ -34,39 +34,47 @@ body{
 }
 .container .container-wraper{
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 }
 .container .container-wraper .forgot-sect{
-   width: 50%;
+   width: 100%;
    display: flex;
    /* align-items: center; */
    justify-content:center ;
+   
+
 }
 .container .container-wraper .forgot-sect .forgot-wrap{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+
     line-height: ;
+    
+
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row{
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 70%;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
     border-radius: 8px;
     /* justify-content: center; */
-    border: 1px solid #fff;
+    border: 1px solid #525766;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row h1{
    margin: 100px 0 20px 0;
    color: #fff;
    padding: 5px 0;
-   font-size: 32px;
+   font-size: ;
    font-weight: 600;
    border-bottom: 3px solid #00853C;
-   width: max-content;
+   width: 100%;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row p{
     color: #D2D2D2;
@@ -103,7 +111,7 @@ body{
     margin-bottom: 50px;
     margin-top: 20px;
 }
-.container .image-sect{
+.container .container-wraper .image-sect{
     display: none;
 }
 @media screen and (min-width:700px){
