@@ -10,7 +10,7 @@
     <div class="slide-rope"> 
         <div class="container">
             <div class="login_con">
-                <div class="login_wrap">
+                <form class="login_wrap">
                     <h2>Register</h2>
                     <br>
                     <div class="input_wraper">
@@ -18,26 +18,26 @@
                           <span class="holder">
                             <label for="frstname">first name</label>
                             <br>
-                            <input type="text" placeholder="First name">
+                            <input id="firsr-name" type="text" placeholder="First name">
                           </span> 
                             <br>
                             <span class="holder">
                                 <label for="frstname">first name</label>
                                 <br>
-                                <input type="text" placeholder="last name">
+                                <input id="last-name" type="text" placeholder="last name">
                             </span>
                             
                         </span>
                         
                         <label for="email">Email</label>
                         <br>
-                        <input type="email" placeholder="Email">
+                        <input id="email" type="email" placeholder="Email">
                         
                         
                         <label for="password">password</label>
                         <br>
                         <span class="password-indicator-con">
-                            <input type="password" placeholder="password">
+                            <input id="password" type="password" placeholder="password">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clip-path="url(#clip0_1765_116)">
                                   <path d="M8.24967 3.53303C8.82328 3.39876 9.41056 3.33164 9.99967 3.33303C15.833 3.33303 19.1663 9.99969 19.1663 9.99969C18.6605 10.946 18.0572 11.837 17.3663 12.658M11.7663 11.7664C11.5375 12.012 11.2615 12.209 10.9548 12.3456C10.6481 12.4823 10.3171 12.5557 9.98142 12.5617C9.64574 12.5676 9.31231 12.5058 9.00102 12.3801C8.68972 12.2544 8.40694 12.0672 8.16955 11.8298C7.93215 11.5924 7.745 11.3096 7.61926 10.9984C7.49353 10.6871 7.43178 10.3536 7.4377 10.018C7.44362 9.68228 7.5171 9.35123 7.65374 9.04457C7.79038 8.7379 7.98738 8.4619 8.23301 8.23303M14.9497 14.9497C13.5252 16.0355 11.7906 16.6371 9.99967 16.6664C4.16634 16.6664 0.833008 9.99969 0.833008 9.99969C1.86958 8.06794 3.30729 6.3802 5.04967 5.0497L14.9497 14.9497Z" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,7 +61,7 @@
                         </span>
                         <br>
                         
-                        <a href="#" class="create-account">Sign Up</a>  
+                        <a id="sinup" type="submit" href="#" class="create-account">Sign Up</a>  
         
                     </div>
                     
@@ -80,7 +80,7 @@
                           </svg>
                         Login with Google
                     </a>
-                </div>
+                </form>
         
              </div>
              <div class="svg-d">
@@ -136,8 +136,9 @@
                         </span>
                         <div class="remember-password">
                             <span class="remember-box">
-                                <input style="background: red; color: aqua;" class="check" type="checkbox" name="checkbox" id="check">
-                                <p class="remb-txt">Remember</p>
+                                <input class="check" type="checkbox" name="checkbox" id="check">
+                                
+                                <label for="check" class="remb-txt">Remember</label>
                             </span>
                             <a class="forgot-password" href="#">Forgot Password ?</a>
                         </div>
