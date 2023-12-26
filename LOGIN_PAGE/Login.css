@@ -131,6 +131,9 @@ letter-spacing: 0.14px;
    /* margin-top: 10px; */
    
 }
+.login_con .login_wrap .email.customise{
+    border: 2px solid red;
+}
 .login_con .login_wrap input[type=checkbox]{
     display:none ;
     /* background-color:red ; */
