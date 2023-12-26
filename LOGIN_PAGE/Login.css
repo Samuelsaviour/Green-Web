@@ -159,8 +159,9 @@ letter-spacing: 0.14px;
     background-color: transparent;
     color: #fff;
 }
-.login_con .login_wrap .incorrect{
-    display: none;
+.login_con .login_wrap .incorrect-txt,
+.login_con .login_wrap .incorrect-pass{
+
     font-size: 12px;
     margin-top: 5px;
     color: #D12E34;
