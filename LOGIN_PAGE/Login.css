@@ -189,6 +189,9 @@ letter-spacing: 0.14px;
     justify-content: center;
     padding: 12px 0;
     font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
     background-color:#00853C;
     /* margin-bottom: 0px; */
     letter-spacing: 0.51px;

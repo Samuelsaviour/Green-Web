@@ -2,13 +2,15 @@ const  firstName=document.querySelector("#first-name")
 const  lastName=document.querySelector("#last-name")
 const  form=document.querySelector("form")
 let errormessage=document.querySelector(".incorrect-txt")
+let errornames=document.querySelector(".incorrect-names")
 const email=document.querySelector("#email1")
 const password=document.querySelector("#password-one")
 const passworderror=document.querySelector(".incorrect-pass")
+const passwordcon=document.querySelector(".password-indicator-con")
 const showhide=document.querySelector("#show-hide")
+ 
+let regx =/^[a-z][a-z,0-9]{10,15}/gi
 
-
-// let regx=/^('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
 
 
 showhide.addEventListener("click",function(params) {
@@ -20,7 +22,18 @@ showhide.addEventListener("click",function(params) {
    }
 })
 
+email.addEventListener('input',function(e){
+  if(!e.value.match(regx)){
+    errormessage.innerText="email is not valid"
+  }
+  else{
+    errormessage.innerText=""
+    
+  }
+      
 
+
+})
 function inputvalid() {
     const emailtrim=email.value.trim()
     const firstNametrim=firstName.value.trim()
@@ -34,7 +47,7 @@ function inputvalid() {
       seterrorforemail(email,'email can not be blank')
     }
 
-    
+     
 
 
     else{
@@ -53,6 +66,27 @@ function inputvalid() {
       setsuccespassword(password)
 
     }
+     
+   
+
+    if (firstNametrim==='') {
+      // show error message
+      seterrorfornames(firstName,'names can not be blank')
+    }
+      else{
+      setsuccesnames(firstName)
+
+    }
+
+
+    if (lastnametrim==='') {
+      // show error message
+      lastName.style.border="2px solid red"
+    }
+      else{
+        lastName.style.border="2px solid green"
+
+    }
 
   }
 
@@ -60,26 +94,48 @@ function inputvalid() {
   function seterrorforpassword(errorpass,messag){
 
     passworderror.innerText=messag
-    password.classList.add("customise")
+    passwordcon.style.border="2px solid red"
 }
 
 function setsuccespassword(errorpass,messag){
 
     passworderror.innerText=''
-    password.classList.remove("customise")
+    passwordcon.style.border="2px solid green"
+    
 }
 
 function seterrorforemail(errorinput,message){
 
     errormessage.innerText=message
-    email.classList.add("customise")
+    email.style.border="2px solid red"
 }
 
 function setsucces(succesinput,message){
 
     errormessage.innerText=''
-    email.classList.remove("customise")
+    email.style.border="2px solid green"
 }
+
+
+
+function seterrorfornames(errorinput,message){
+
+    errornames.innerText=message
+    firstName.style.border="2px solid red"
+}
+
+function setsuccesnames(errorinput,message){
+
+  errornames.innerText=""
+  firstName.style.border="2px solid green"
+}
+
+
+
+
+
+
+ 
 
 form.addEventListener("submit",function(e) {
     e.preventDefault()
@@ -87,9 +143,9 @@ form.addEventListener("submit",function(e) {
     inputvalid()
 })
 
-// function isemail(email) {
-//     return regx.test(String(email).toLowerCase())
-// }
+function isemail(email) {
+    
+}
  
 
 // validation of form
