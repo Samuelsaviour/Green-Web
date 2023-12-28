@@ -9,7 +9,7 @@ const passworderror=document.querySelector(".incorrect-pass")
 const passwordcon=document.querySelector(".password-indicator-con")
 const showhide=document.querySelector("#show-hide")
  
-let regx =/^[a-z][a-z,0-9]{10,15}/gi
+let regx =/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 
 
