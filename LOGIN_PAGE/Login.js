@@ -8,6 +8,9 @@ const password=document.querySelector("#password-one")
 const passworderror=document.querySelector(".incorrect-pass")
 const passwordcon=document.querySelector(".password-indicator-con")
 const showhide=document.querySelector("#show-hide")
+const registerbtn=document.querySelector(".register-btn")
+const sliderope=document.querySelector(".slide-rope")
+
  
 let regx =/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
@@ -20,6 +23,12 @@ showhide.addEventListener("click",function(params) {
    else{
     password.type="password"
    }
+})
+
+
+
+registerbtn.addEventListener("click",function(){
+    sliderope.classList.add("itranslate")
 })
 
 email.addEventListener('input',function(e){
