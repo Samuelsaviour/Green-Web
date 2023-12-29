@@ -297,7 +297,7 @@ background: var(--Primary, #00853C);
 }
 
 .slide-rope.itranslate{
-    transform:translateX(100%)
+    left:0;
 }
 @media screen and (min-width:700px){
 .slide-rope .container .svg-d{
