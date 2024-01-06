@@ -10,6 +10,10 @@ const passwordcon=document.querySelector(".password-indicator-con")
 const showhide=document.querySelector("#show-hide")
 const registerbtn=document.querySelector(".register-btn")
 const sliderope=document.querySelector(".slide-rope")
+const password2=document.querySelector("#password2")
+const error_e=document.querySelector("#error-e")
+const error_p=document.querySelector("#error-p")
+
 
  
 let regx =/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -27,9 +31,9 @@ showhide.addEventListener("click",function(params) {
 
 
 
-registerbtn.addEventListener("click",function(){
-    sliderope.classList.add("itranslate")
-})
+// registerbtn.addEventListener("click",function(){
+//     sliderope.classList.add("itranslate")
+// })
 
 email.addEventListener('input',function(e){
   if(!e.value.match(regx)){
@@ -39,10 +43,25 @@ email.addEventListener('input',function(e){
     errormessage.innerText=""
     
   }
-      
-
+    
 
 })
+
+
+
+
+// email2.addEventListener('input',function(e){
+//   if(!e.value.match(regx)){
+//     error_e.style.display='flex'
+//   }
+//   else{
+//     error_e.style.display='none'
+   
+    
+//   }
+    
+
+// })
 function inputvalid() {
     const emailtrim=email.value.trim()
     const firstNametrim=firstName.value.trim()
