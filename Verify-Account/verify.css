@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fira+Code:wght@300&family=Poppins:wght@100;300&display=swap');
 
 
@@ -27,6 +28,9 @@ body{
     font-family:system-ui, -apple-system, sans-serif 'Cedarville Cursive', cursive;
     font-family:system-ui, -apple-system, 'Fira Code', monospace;
     font-family: system-ui, -apple-system,'Poppins', sans-serif;
+}
+a{
+    color: green;
 }
 .container{
     width: 100%;
@@ -61,6 +65,7 @@ body{
     flex-direction: column;
     align-items: left;
     width: 90%;
+ 
     margin: 0 auto;
     max-width: 400px;
     border-radius: 8px;
@@ -77,15 +82,27 @@ body{
    width:70%;
    /* max-width: 400px; */
 }
-.container .container-wraper .forgot-sect .forgot-wrap .forgot-row p{
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .code-msg{
     color: #D2D2D2;
     margin: 29px 0 0 0;
     font-size: 12px;
-    max-width: 270px;
+    /* max-width: 270px; */
+    text-wrap: balance;
     line-height: 1.5;
 }
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row  .didnt-recieve-code{
+    text-align: center;
+    font-size:12px ;
+    color: #D2D2D2;
+}
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row  .didnt-recieve-code + p{
+    font-size: 12px;
+    text-align: center;
+    color: #D2D2D2;
+
+}
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box{
-    margin: 30px 0 50px 0;
+    margin: 10px 0 50px 0;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box label{
     color: #D2D2D2;
