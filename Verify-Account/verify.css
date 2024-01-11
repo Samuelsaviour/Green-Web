@@ -53,7 +53,7 @@ a{
 .container .container-wraper .forgot-sect .forgot-wrap{
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
 
     line-height: ;
     
@@ -106,7 +106,7 @@ a{
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper{
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input{
   max-width: 70px;
