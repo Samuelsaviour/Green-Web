@@ -147,4 +147,8 @@ a{
     .image-sect{
         display: flex;
     }
+    .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper{
+    display: flex;
+    gap: 20px;
+}
 }
