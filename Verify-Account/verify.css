@@ -76,7 +76,7 @@ a{
    margin: 90px 0 20px 0;
    color: #fff;
    padding: 5px 0;
-   font-size: ;
+   font-size: 25px;
    font-weight: 600;
    border-bottom: 3px solid #00853C;
    width:70%;
@@ -150,5 +150,8 @@ a{
     .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper{
     display: flex;
     gap: 20px;
+}
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row h1{
+    font-size: 30px;
 }
 }
