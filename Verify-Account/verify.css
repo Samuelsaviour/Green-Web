@@ -111,7 +111,10 @@ a{
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input{
   max-width: 70px;
 }
-.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input:focus{
+/*.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input:focus{
+   border: 2px solid blue;
+}*/
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper  .filled:focus{
    border: 2px solid blue;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box label{
@@ -139,6 +142,9 @@ a{
     
     margin-bottom: 50px;
     margin-top: 10px;
+}
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .instructions.activate{
+    background-color: green;
 }
 .container .container-wraper .image-sect{
     display: none;
