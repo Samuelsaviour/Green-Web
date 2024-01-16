@@ -103,6 +103,8 @@ body{
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input{
   max-width: 70px;
+    font-weight: 700;
+    font-size: 20px;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box input{
     background-color: #fff;
@@ -112,7 +114,7 @@ body{
     width: 100%;
     margin-top: 10px;
     margin-bottom: 15px;
-    padding: 12px 16px;
+    padding: 16px 16px;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .instructions{
     width: 100%;
