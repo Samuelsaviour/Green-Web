@@ -62,7 +62,7 @@ body{
     align-items: left;
     width: 90%;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 370px;
     border-radius: 8px;
     /* justify-content: center; */
     border: 1px solid #525766;
@@ -74,6 +74,7 @@ body{
    font-size: ;
    font-weight: 600;
    text-wrap: balance;
+
    border-bottom: 3px solid #00853C;
    /* width:70%; */
    /* max-width: 400px; */
@@ -90,8 +91,18 @@ body{
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box label{
     color: #D2D2D2;
-    margin: 10px 0;
+    margin: 10px 0 10px 0px;
     line-height: 10px;
+}
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    
+    justify-content: center;
+}
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input{
+  max-width: 70px;
 }
 .container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box input{
     background-color: #fff;
@@ -122,4 +133,11 @@ body{
     .image-sect{
         display: flex;
     }
+}
+
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .email-box .otp-wraper input.border{
+    border: 2px solid green;
+}
+.container .container-wraper .forgot-sect .forgot-wrap .forgot-row .instructions.activate{
+    background-color: red;
 }
