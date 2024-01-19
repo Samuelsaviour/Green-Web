@@ -14,28 +14,32 @@
 	  
 	<div class="sigin-con"> 
      
-    	<form>
+    	<form action="">
     			 <h2>Sign in</h2>
     		<div class="inputfield names-con">
-    			<span class="names f-name">
+    			<span class="names first-name">
     				<i class="fa-solid fa-user" ></i>
     				<input type="text" id="first-name" name="" placeholder="First Name">
     			</span>
-    			<span class="names s-name">
+    			<span class="names last-name">
     				<i class="fa-solid fa-user" ></i>
     				<input type="text" id="last-name" name="" placeholder="Last Name">
     			</span>
     		</div>
+    		<p class="incorrect-names" style="margin: 0 ;color: red; text-align: left;"></p>
+
     		<div class="inputfield email-con">
     			<i class="fa-solid fa-envelope" ></i>
     			<input type="email" name="" id="email" placeholder="Email">
     		</div>
-    		<p class="error-message" style="margin: 0;"></p>
-    		<span  class="inputfield email-con">
+    		<p class="error-message" style="margin: 0; color: red;text-align: left;"></p>
+    		<span  class="inputfield password-con">
     			<i class="fa-solid fa-lock" ></i>
     			<input type="password" name="" id="password" placeholder="password">
     			<i class="fa-solid fa-eye" id="show-hide" ></i>
     		</span>
+    		<p class="incorrect-pass" style="margin: 0; color: red; text-align: left;"></p>
+
     		   <button type="submit"> Sign In</button>
     		  
     		  <a href="#" class="already-got-acc">Already have an account</a>
@@ -59,151 +63,6 @@
    <div class="png-con">
    	
    </div>
-<script type="text/javascript">
-const password=document.querySelector("#password")
-const showhide=document.querySelector("#show-hide")
-const email=document.querySelector("#email")
-let errormessage=document.querySelector(".error-message")
-const  form=document.querySelector("form")
-const  firstName=document.querySelector("#first-name")
-const  lastName=document.querySelector("#last-name")
-
-
-
-let regx =/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-
-	
-	showhide.addEventListener("click",function(params) {
-   if(password.type=="password"){
-    password.type="text"
-    showhide.className="fa-solid fa-eye-slash"
-   }
-   else{
-    password.type="password"
-    showhide.className="fa-solid fa-eye"
-
-   }
-})
-
-
-
-	email.addEventListener('input',function(e){
-  if(!e.value.match(regx)){
-    errormessage.innerText="email is not valid"
-  }
-  else{
-    errormessage.innerText=""
-    
-  }
-    
-
-
-    function inputvalid() {
-    const emailtrim=email.value.trim()
-    const firstNametrim=firstName.value.trim()
-    const lastnametrim=lastName.value.trim()
-    const passwordtrim=password.value.trim()
-  
-  
-  
-    if (emailtrim==='') {
-      // show error message
-      seterrorforemail(email,'email can not be blank')
-    }
-
-     
-
-
-    else{
-      // show succes
-      setsucces(email)
-    }
-     
-
-
-
-    if (passwordtrim==="") {
-      seterrorforpassword(password,'password can not be blank')
-        
-    }
-    else{
-      setsuccespassword(password)
-
-    }
-     
-   
-
-    if (firstNametrim==='') {
-      // show error message
-      seterrorfornames(firstName,'names can not be blank')
-    }
-      else{
-      setsuccesnames(firstName)
-
-    }
-
-
-    if (lastnametrim==='') {
-      // show error message
-      lastName.style.border="2px solid red"
-    }
-      else{
-        lastName.style.border="2px solid green"
-
-    }
-
-  }
-
-
-  function seterrorforpassword(errorpass,messag){
-
-    passworderror.innerText=messag
-    passwordcon.style.border="2px solid red"
-}
-
-})
-
-
-
-function setsuccespassword(errorpass,messag){
-
-    passworderror.innerText=''
-    passwordcon.style.border="2px solid green"
-    
-}
-
-function seterrorforemail(errorinput,message){
-
-    errormessage.innerText=message
-    email.style.border="2px solid red"
-}
-
-function setsucces(succesinput,message){
-
-    errormessage.innerText=''
-    email.style.border="2px solid green"
-}
-
-
-
-function seterrorfornames(errorinput,message){
-
-    errornames.innerText=message
-    firstName.style.border="2px solid red"
-}
-
-function setsuccesnames(errorinput,message){
-
-  errornames.innerText=""
-  firstName.style.border="2px solid green"
-}
-
-
-	form.addEventListener("submit",function(e) {
-    e.preventDefault()
-
-    inputvalid()
-})
-</script>
+  <script src="../Signin/sign.js"></script>
 </body>
 </html>
