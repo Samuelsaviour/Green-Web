@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/all.css">
+	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/solid.css">
+	<link rel="stylesheet" type="text/css" href="../css/regular.css">
+	<title>Sign in</title>
+	<link rel="stylesheet" type="text/css" href="../Signin/signin.css">
+</head>
+<body>
+	  
+	<div class="sigin-con"> 
+     
+    	<form>
+    			 <h2>Sign in</h2>
+    		<div class="inputfield names-con">
+    			<span class="names f-name">
+    				<i class="fa-solid fa-user" ></i>
+    				<input type="text" id="first-name" name="" placeholder="First Name">
+    			</span>
+    			<span class="names s-name">
+    				<i class="fa-solid fa-user" ></i>
+    				<input type="text" id="last-name" name="" placeholder="Last Name">
+    			</span>
+    		</div>
+    		<div class="inputfield email-con">
+    			<i class="fa-solid fa-envelope" ></i>
+    			<input type="email" name="" id="email" placeholder="Email">
+    		</div>
+    		<p class="error-message" style="margin: 0;"></p>
+    		<span  class="inputfield email-con">
+    			<i class="fa-solid fa-lock" ></i>
+    			<input type="password" name="" id="password" placeholder="password">
+    			<i class="fa-solid fa-eye" id="show-hide" ></i>
+    		</span>
+    		   <button type="submit"> Sign In</button>
+    		  
+    		  <a href="#" class="already-got-acc">Already have an account</a>
+             
+    		<div class="register-btn">
+    			 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.02 12.2729C24.02 11.422 23.9436 10.6038 23.8018 9.81836H12.5V14.4602H18.9582C18.68 15.9602 17.8345 17.2311 16.5636 18.082V21.0929H20.4418C22.7109 19.0038 24.02 15.9274 24.02 12.2729Z" fill="#4285F4"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 24.0003C15.74 24.0003 18.4564 22.9257 20.4418 21.093L16.5636 18.0821C15.4891 18.8021 14.1145 19.2275 12.5 19.2275C9.37455 19.2275 6.72909 17.1166 5.78546 14.2803H1.77637V17.3894C3.75091 21.3112 7.80909 24.0003 12.5 24.0003Z" fill="#34A853"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.78545 14.2804C5.54545 13.5604 5.40909 12.7913 5.40909 12.0004C5.40909 11.2095 5.54545 10.4404 5.78545 9.72042V6.61133H1.77636C0.963636 8.23133 0.5 10.0641 0.5 12.0004C0.5 13.9368 0.963636 15.7695 1.77636 17.3895L5.78545 14.2804Z" fill="#FBBC05"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 4.77273C14.2618 4.77273 15.8436 5.37818 17.0873 6.56727L20.5291 3.12545C18.4509 1.18909 15.7345 0 12.5 0C7.80909 0 3.75091 2.68909 1.77637 6.61091L5.78546 9.72C6.72909 6.88364 9.37455 4.77273 12.5 4.77273Z" fill="#EA4335"/>
+                          </svg>
+    			Register with google
+    		</div>
+    		 <p>By Continuing, you agree to our <a href="#">Terms of Service</a>  
+            and <a href="#">Privacy Policy</a>  
+           </p>
+    	</form>
+       </div>
+
+      
+   <div class="png-con">
+   	
+   </div>
+<script type="text/javascript">
+const password=document.querySelector("#password")
+const showhide=document.querySelector("#show-hide")
+const email=document.querySelector("#email")
+let errormessage=document.querySelector(".error-message")
+const  form=document.querySelector("form")
+const  firstName=document.querySelector("#first-name")
+const  lastName=document.querySelector("#last-name")
+
+
+
+let regx =/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+	
+	showhide.addEventListener("click",function(params) {
+   if(password.type=="password"){
+    password.type="text"
+    showhide.className="fa-solid fa-eye-slash"
+   }
+   else{
+    password.type="password"
+    showhide.className="fa-solid fa-eye"
+
+   }
+})
+
+
+
+	email.addEventListener('input',function(e){
+  if(!e.value.match(regx)){
+    errormessage.innerText="email is not valid"
+  }
+  else{
+    errormessage.innerText=""
+    
+  }
+    
+
+
+    function inputvalid() {
+    const emailtrim=email.value.trim()
+    const firstNametrim=firstName.value.trim()
+    const lastnametrim=lastName.value.trim()
+    const passwordtrim=password.value.trim()
+  
+  
+  
+    if (emailtrim==='') {
+      // show error message
+      seterrorforemail(email,'email can not be blank')
+    }
+
+     
+
+
+    else{
+      // show succes
+      setsucces(email)
+    }
+     
+
+
+
+    if (passwordtrim==="") {
+      seterrorforpassword(password,'password can not be blank')
+        
+    }
+    else{
+      setsuccespassword(password)
+
+    }
+     
+   
+
+    if (firstNametrim==='') {
+      // show error message
+      seterrorfornames(firstName,'names can not be blank')
+    }
+      else{
+      setsuccesnames(firstName)
+
+    }
+
+
+    if (lastnametrim==='') {
+      // show error message
+      lastName.style.border="2px solid red"
+    }
+      else{
+        lastName.style.border="2px solid green"
+
+    }
+
+  }
+
+
+  function seterrorforpassword(errorpass,messag){
+
+    passworderror.innerText=messag
+    passwordcon.style.border="2px solid red"
+}
+
+})
+
+
+
+function setsuccespassword(errorpass,messag){
+
+    passworderror.innerText=''
+    passwordcon.style.border="2px solid green"
+    
+}
+
+function seterrorforemail(errorinput,message){
+
+    errormessage.innerText=message
+    email.style.border="2px solid red"
+}
+
+function setsucces(succesinput,message){
+
+    errormessage.innerText=''
+    email.style.border="2px solid green"
+}
+
+
+
+function seterrorfornames(errorinput,message){
+
+    errornames.innerText=message
+    firstName.style.border="2px solid red"
+}
+
+function setsuccesnames(errorinput,message){
+
+  errornames.innerText=""
+  firstName.style.border="2px solid green"
+}
+
+
+	form.addEventListener("submit",function(e) {
+    e.preventDefault()
+
+    inputvalid()
+})
+</script>
+</body>
+</html>
