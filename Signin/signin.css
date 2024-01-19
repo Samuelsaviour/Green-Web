@@ -79,11 +79,12 @@ input{
  	display: flex;
  	align-items: center;
  	/*padding-top: 10px;*/
+	padding: 0 10px;
  	
 }
 .sigin-con form{
-  width: 60%;
-  margin: auto; auto;
+  width:100%;
+  margin: auto auto;
   height: 90vh;
  border: 1px solid  rgb(153, 153, 153);
  display: flex;
@@ -148,5 +149,8 @@ input{
 	 }
 .sigin-con{
 	width: 50%;
+}
+ .sigin-con form{
+  width: 60%;
 }
 }
